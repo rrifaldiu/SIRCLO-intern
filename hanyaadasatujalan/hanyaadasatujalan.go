@@ -7,6 +7,8 @@ import (
 )
 
 func main() {
+
+	// reading file
 	reader := bufio.NewReader(os.Stdin)
     var m, n int
     fmt.Scan(&m, &n)
@@ -42,6 +44,9 @@ func main() {
     	i++
     }
 
+    // search for a . or E near current x,y
+    // if found, replace the . or E with 'X' and write the direction to console;
+    // if E found, exit the loop
     notFinished := true
     for notFinished {
     	if x > 0 {
